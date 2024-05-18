@@ -1,0 +1,54 @@
+.heroSection {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+
+.heroSection h1 {
+    color: white;
+    margin: 10px 0;
+    font-weight: bold;
+    background: linear-gradient(to right, blue,cyan, rgb(0, 9, 140)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.heroNav{
+    background: var(--grey);
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    /* border-radius: 10px; */
+}
+
+.heroMenuContainer{
+    /* margin: 50px 0; */
+}
+
+.balanceContainer{
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.balanceSignContainer{
+    padding:0 5px;
+    background: var(--blue);
+}
+
+.aboutSection{
+    min-height: 50vh;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.aboutSection h1{
+    background: linear-gradient(to right, #f32170,#ff6b08, #cf23cf, #eedd44); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}

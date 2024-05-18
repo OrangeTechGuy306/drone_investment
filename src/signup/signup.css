@@ -1,0 +1,56 @@
+
+
+.signupForm{
+    min-height: 100vh;
+}
+
+.mobileInput label{
+    padding: 5px;
+    background: rgb(21, 21, 21);
+}
+
+
+
+.signupForm form div{
+    margin: 20px 0;
+}
+
+.signupForm form div input{
+    background-color: transparent;
+    border: .5px solid grey;
+    outline: none;
+    width: 300px;
+}
+
+
+.mobileInput input{
+    background: transparent;
+    outline: none;
+    border: .5px solid grey;
+    width: 250px;
+}
+
+.mInput{
+    width: 250px;
+}
+
+.signupForm form div input::placeholder{
+    color: white;
+}
+
+.signupForm form{
+    background:rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+
+.signupForm form input[type="submit"]{
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
