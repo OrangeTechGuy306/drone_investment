@@ -13,19 +13,19 @@ const BottomNav = () => {
   return (
     <div className='bottomNav'>
     <div className="flex justify-around items-center heroMenuContainer">
-    <Link to={""} className="text-center flex flex-col justify-center items-center heroNav gap-5">
+    <Link to={"/"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
         <HomeIcon/>
         <small>Home</small>
     </Link>
-    <Link to={""} className="text-center flex flex-col justify-center items-center heroNav gap-5">
+    <Link to={"/products"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
         <LocalMallIcon/>
         <small>Products</small>
     </Link>
-    <Link to={""} className="text-center flex flex-col justify-center items-center heroNav gap-5">
+    <Link to={"/team"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
         <Groups2Icon/>
         <small>Team</small>
     </Link>
-    <Link to={""} className="text-center flex flex-col justify-center items-center heroNav gap-5">
+    <Link to={"/profile"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
         <AssignmentIndIcon/>
         <small>Profile</small>
     </Link>

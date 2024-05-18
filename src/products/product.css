@@ -1,0 +1,13 @@
+
+
+.productHeroSection{
+    min-height: 50vh;
+}
+
+
+.productCard{
+    background-color: var(--grey);
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
