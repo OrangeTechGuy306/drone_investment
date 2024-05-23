@@ -19,19 +19,19 @@ const Homepage = () => {
         </div>
 
         <div className="flex justify-center items-center heroMenuContainer">
-            <Link to={""} className="text-center flex flex-col justify-center items-center heroNav gap-1">
+            <Link to={"/deposit"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
                 <AddCardIcon/>
                 <small>Make <br/> Deposit</small>
             </Link>
-            <Link to={""} className="text-center flex flex-col justify-center items-center heroNav gap-1">
+            <Link to={"/withdrawal"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
                 <AccountBalanceWalletIcon/>
                 <small>Withdraw <br/> Money</small>
             </Link>
-            <Link to={""} className="text-center flex flex-col justify-center items-center heroNav gap-1">
+            <Link to={"/customer"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
                 <DeviceUnknownIcon/>
                 <small>Customer <br/>Care</small>
             </Link>
-            <Link to={""} className="text-center flex flex-col justify-center items-center heroNav gap-1">
+            <Link to={"/checkin"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
                 <EventRepeatIcon/>
                 <small>Daily <br/>Check in</small>
             </Link>

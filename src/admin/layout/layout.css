@@ -1,0 +1,45 @@
+.layoutContainer{
+    background: white;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.sidebar{
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 20px 5px;
+    background: black;
+}
+
+.sidebarLinks a{
+    color: grey;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: all .3s ease-in;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sidebarLinks a:hover{
+    background: var(--grey);
+}
+
+.sidebarLinks{
+    margin: 20px 0;
+}
+
+
+.adminNav form{
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.adminNav form input{
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 250px;
+}

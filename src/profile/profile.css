@@ -1,0 +1,16 @@
+
+
+.profileHeader{
+    width: 100%;
+}
+
+.profileDashContainer a{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

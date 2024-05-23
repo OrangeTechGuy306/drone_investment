@@ -52,3 +52,8 @@
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
+
+.heroMenuContainer{
+    margin: 10px 0;
+    background: var(--grey);
+}
