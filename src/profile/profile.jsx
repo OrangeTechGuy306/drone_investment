@@ -61,7 +61,7 @@ const ProfilePage = () => {
 
             <div className='pb-5 flex justify-center flex-wrap gap-2 items-center px-3 profileDashContainer mt-5'>
 
-                <Link to={"/about"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center'>
+                <Link to={"/about"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center text-white'>
                     <div className='flex justify-start items-center flex-col gap-1'>
                         <IoMdInformationCircleOutline size={30} />
                         <small className=''>About Us</small>
@@ -69,39 +69,39 @@ const ProfilePage = () => {
                    
                 </Link>
 
-                <Link to={"/cart"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center'>
+                <Link to={"/cart"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center text-white'>
                     <div className='flex justify-start items-center gap-1 flex-col'>
                         <GiDeliveryDrone size={30} />
                         <small className=''>My Drone</small>
                     </div>
                 </Link>
 
-                <Link to={"/team"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center'>
+                <Link to={"/team"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center text-white'>
                     <div className='flex justify-start items-center gap-1 flex-col'>
                         <FaNoteSticky size={30} />
                         <span className=''>Platform <br/> rules</span>
                     </div>
                 </Link>
 
-                <Link to={"/customer"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center'>
+                <Link to={"/customer"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center text-white'>
                     <div className='flex justify-start items-center gap-1 flex-col'>
                         <FaHeadset size={30} />
                         <span className=''>Customer Care</span>
                         </div>
                 </Link>
 
-                <Link to={"/withdrawal/records"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center'>
-                    <div className='flex justify-start items-center gap-1 flex-col'>
+                <Link to={"/withdrawal/records"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center text-white'>
+                    <div className='flex justify-start items-center gap-1 flex-col text-white'>
                         <MdEditNote size={30} />
                         <span className=''>Withdrawal <br/> Records</span>
                     </div>
                         
                 </Link>
 
-                <Link to={"/deposit/records"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center'>
+                <Link to={"/deposit/records"} className='proLinkContainer flex justify-between items-center text-black py-3 text-center text-white'>
                     <div className='flex justify-start text-center items-center gap-1 flex-col'>
                         <MdEditNote size={30} />
-                        <span className=''>Deposit <br/> Records</span>
+                        <span className='text-white'>Deposit <br/> Records</span>
                     </div>
                 </Link>
 
