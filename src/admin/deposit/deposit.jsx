@@ -1,10 +1,38 @@
-import { Card, Table } from "antd";
+import { Card, Modal, Table } from "antd";
 import AdminLayout from "../layout/layout";
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import useDeposit from "./context/despositcontext";
+import { useState } from "react";
+import { Toaster } from "sonner";
 
 
 
 const DepositDashPage = () => {
+
+  const {addDeposit} = useDeposit()
+  const [open, setOpen] = useState(false)
+
+  const [value, setValue] = useState({
+    mobile:"",
+    amount:""
+  })
+
+  const {mobile, amount} = value
+  const handleChange =(e)=>{
+      setValue({...value, [e.target.name]:e.target.value})
+  }
+
+  const deposit = (e)=>{
+    e.preventDefault()
+    addDeposit(mobile, amount)
+  }
+
+  const openModal = ()=>{
+    setOpen(true)
+  }
+  const closeModal = ()=>{
+    setOpen(false)
+  }
 
   const dataSource = [
     {
@@ -76,11 +104,24 @@ const DepositDashPage = () => {
            </div>
             </Card.Grid>
 
-                <form className="flex justify-start items-center">
-                    <input type="search" className="form-control" name="" placeholder="Search Withdrawal" style={{width:300}}/>
-                    <button className="py-1 px-3 text-white bg-danger">Search</button>
-                </form>
+                <div className="d-flex gap-2">
+                  <form className="flex justify-start items-center">
+                      <input type="search" className="form-control" name="" placeholder="Search Withdrawal" style={{width:300}}/>
+                      <button className="py-1 px-3 text-white bg-danger">Search</button>
+                  </form>
 
+                  <button className="btn btn-success py-1" onClick={openModal}>New Deposit</button>
+                  <Toaster position="top-right" richColors/>
+                  <Modal open={open} onCancel={closeModal}>
+                      <form onSubmit={deposit}>
+                      ``<h5>New Deposit</h5>
+                          <input type="number" name="mobile" onChange={handleChange} className="form-control my-3" placeholder="Enter Mobile"/>
+                          <input type="number" name="amount" onChange={handleChange} className="form-control my-3" placeholder="Enter Amount"/>
+                          <input type="submit" value="Deposit" onChange={handleChange} className="btn btn-primary my-3" />
+                      </form>
+                  </Modal>
+                </div>
+                
             </div>
 
           <div className="my-5">

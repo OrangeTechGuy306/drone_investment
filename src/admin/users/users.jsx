@@ -106,6 +106,7 @@ const UsersPage = () => {
                 </div>
                 </Card.Grid>
 
+               
                 <form className="flex justify-start items-center">
                     <input type="search" className="form-control" name="" placeholder="Search user" style={{width:300}}/>
                     <button className="py-1 px-3 text-white bg-primary">Search</button>

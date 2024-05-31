@@ -14,6 +14,7 @@ const AdminLayout = ({children}) => {
             <div className="sidebarLinks flex flex-col justify-start items-start gap-4">
                 <Link to={'/dash'}>Dashboard</Link>
                 <Link to={'/users'}>Users</Link>
+                <Link to={'/product'}>Proudcts</Link>
                 <Link to={'/withdrawal'}>Withdrawals</Link>
                 <Link to={'/deposits'}>Deposits</Link>
                 <Link to={'/admins'}>Admins</Link>

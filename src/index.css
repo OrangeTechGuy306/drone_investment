@@ -69,6 +69,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input{
+  color: grey !important;
+}
+
+input:focus{
+  background: transparent !important;
+}
+
+input::placeholder{
+  color: grey !important;
+}
+
+
 .flex{
   display: flex;
 }

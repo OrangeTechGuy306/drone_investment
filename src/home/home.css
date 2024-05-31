@@ -1,5 +1,5 @@
 .heroSection {
-  min-height: 100vh;
+  min-height: 50vh;
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
 }
@@ -56,4 +56,26 @@
 .heroMenuContainer{
     margin: 10px 0;
     background: var(--grey);
+}
+
+.homeDashContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.homeDashboard{
+    background: rgb(20,20,20);
+    display: grid;
+    grid-template-columns: 33% 33% 33% ;
+    row-gap: 20px;
+    padding: 20px 10px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.homeDashCard small{
+    font-size: 10px;
+    font-weight: normal;
 }

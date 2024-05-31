@@ -1,11 +1,8 @@
 import { BiLogOutCircle, BiUser} from "react-icons/bi";
-
 import { FaHeadset, FaNoteSticky } from "react-icons/fa6";
 import { GiDeliveryDrone } from "react-icons/gi";
-
 import { MdEditNote } from "react-icons/md";
-
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AddCardIcon from '@mui/icons-material/AddCard';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import DeviceUnknownIcon from '@mui/icons-material/DeviceUnknown';
@@ -13,11 +10,48 @@ import EventRepeatIcon from '@mui/icons-material/EventRepeat';
 import { IoIosArrowForward, IoMdInformationCircleOutline } from "react-icons/io";
 import "./profile.css"
 import BottomNav from "../components/bottomnav";
-
+import { useEffect, useState } from "react";
+import axios from "axios"
 
 
 
 const ProfilePage = () => {
+
+    const navigate = useNavigate()
+    const user = JSON.parse(localStorage.getItem("altomaxx"))
+    const [total, setTotal] = useState('')
+    // const [ref, setRef] = useState('')
+
+    const getreferralNetwork = async()=>{
+        
+        // const currentUser = JSON.parse(localStorage.getItem("altomaxx"));
+        // const {data} = await axios.get(`http://localhost:5000/ref/${currentUser.referral}`)
+        // setRef(data.msg)
+        // console.log(data.msg)
+      }
+
+    const userWallet = async()=>{
+        const user = JSON.parse(localStorage.getItem("altomaxx"))
+        const {data} = await axios.get(`http://localhost:5000/user/wallet/${user.name}`)
+        console.log(data)
+        if(data.status === true){
+            setTotal(data.msg)
+        }else{
+            setTotal(data.msg)
+            console.log(data)
+        }
+    }
+
+   
+    const logout = ()=>{
+        localStorage.removeItem("altomaxx")
+        navigate("/login")
+    }
+
+    useEffect(()=>{
+        userWallet()
+        getreferralNetwork()
+    },[])
 
 
     return ( 
@@ -28,14 +62,13 @@ const ProfilePage = () => {
                 <div className='profileHeader flex justify-between items-center text-white px-2 py-5 gap-2'>
                     <div className='proLogoContainer flex justify=center items-center'>
                         <BiUser size={40}/>
-                        <h5>orange</h5>
+                        <h5>{user.name}</h5>
                     </div>
                     <div className='text-white px-5 flex flex-col'>
-                        <h5 className='font-bold text-sm'>&#8358;{41534}</h5>
+                        <h5 className='font-bold text-sm'>&#8358; {Intl.NumberFormat().format(total)}</h5>
                         <small className='margin-auto'>Account Balance</small>
                     </div>
                 </div>
-
 
             </div>
 
@@ -44,7 +77,7 @@ const ProfilePage = () => {
                     <AddCardIcon />
                     <small>Make <br/> Deposit</small>
                 </Link>
-                <Link to={"/withdrawal"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
+                <Link to={"/withdraw"} className="text-center flex flex-col justify-center items-center heroNav gap-1">
                     <AccountBalanceWalletIcon/>
                     <small>Withdraw <br/> Money</small>
                 </Link>
@@ -105,7 +138,7 @@ const ProfilePage = () => {
                     </div>
                 </Link>
 
-                <button className=' btn btn-danger text-white proLinkContainer flex justify-between items-center text-black py-3'>
+                <button className=' btn btn-danger text-white proLinkContainer flex justify-between items-center text-black py-3' onClick={logout}>
                     <div className='flex justify-start items-center gap-3'>
                         <BiLogOutCircle size={30} />
                         <span className='text-md '>Logout</span>

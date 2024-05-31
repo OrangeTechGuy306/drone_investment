@@ -9,6 +9,9 @@
     background: rgb(21, 21, 21);
 }
 
+.mobileInput input{
+    width: 250px !important;
+}
 
 
 .signupForm form div{
@@ -31,7 +34,7 @@
 }
 
 .mInput{
-    width: 250px;
+    /* width: 250px; */
 }
 
 .signupForm form div input::placeholder{

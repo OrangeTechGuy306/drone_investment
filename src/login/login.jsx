@@ -1,4 +1,7 @@
 import { Input } from "antd";
+import useLoginContext from "./context/context";
+import { useState } from "react";
+import { Toaster } from "sonner";
 // import "../signup/signup.css"
 
 
@@ -6,8 +9,23 @@ import { Input } from "antd";
 
 const LoginPage = () => {
 
+    const {validateUser}  = useLoginContext()
+  
+    const [user, setUser] = useState({
+      mobile:"",
+      password:"",
+    })
 
-  const handleChange = () => {};
+    const {mobile,  password} = user
+
+    const handleChange = (e)=>{
+      setUser({...user, [e.target.name]: e.target.value})
+    }
+    const loginUser = (e)=>{
+      e.preventDefault()
+      validateUser(mobile,  password)
+    }
+
 
   return (
     <div>
@@ -15,15 +33,16 @@ const LoginPage = () => {
 
       <div className="signupForm flex justify-center items-center">
 
+            <Toaster position="top-right" richColors/>
 
-        <form>
+        <form onSubmit={loginUser}>
         
           <div>
               <h1 className="text-md">Login</h1>
           </div>
 
           <div>
-            <Input type="tel" placeholder="Mobile" onChange={handleChange} />
+            <Input type="tel" name="mobile" placeholder="Mobile" onChange={handleChange} />
           </div>
 
           <div>
@@ -31,10 +50,11 @@ const LoginPage = () => {
               type="password"
               placeholder="Password"
               onChange={handleChange}
+              name="password"
             />
           </div>
 
-          <input type="submit" className="" value={"Sign up"} />
+          <input type="submit" className="text-white" value={"Sign up"} />
 
         </form>
 

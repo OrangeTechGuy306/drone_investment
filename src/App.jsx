@@ -17,6 +17,8 @@ import DashboardPage from "./admin/dashboard/dash"
 import UsersPage from "./admin/users/users"
 import DepositDashPage from "./admin/deposit/deposit"
 import AdminDashPage from "./admin/admins/admins"
+import AdminProductsPage from "./admin/products/products"
+import UserWithdrawalPage from "./withdrawal/withdrawal"
 
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
   
         <Routes>
           <Route path="/" element={<Homepage/>}/>
-          <Route path="/signup" element={<SignupPage/>}/>
+          <Route path="/signup/:referral" element={<SignupPage/>}/>
           <Route path="/login" element={<LoginPage/>}/>
           <Route path="/products" element={<ProductPage/>}/>
           <Route path="/team" element={<TeamPage/>}/>
@@ -36,7 +38,7 @@ function App() {
           <Route path="/withdrawal/records" element={<WithdrawalRecords/>}/>
           <Route path="/deposit/records" element={<DepositPage/>}/>
           <Route path="/deposit" element={<DepositedPage/>}/>
-          <Route path="/withdrawal" element={<WithdrawalPage/>}/>
+          <Route path="/withdraw" element={<UserWithdrawalPage/>}/>
           <Route path="/checkin" element={<CheckinPage/>}/>
           <Route path="/cart" element={<CartPage/>}/>
           
@@ -44,6 +46,7 @@ function App() {
           {/** ADMIN DASHBOARDS  */}
           <Route path="/dash" element={<DashboardPage/>}/>
           <Route path="/users" element={<UsersPage/>}/>
+          <Route path="/product" element={<AdminProductsPage/>}/>
           <Route path="/withdrawal" element={<WithdrawalPage/>}/>
           <Route path="/deposits" element={<DepositDashPage/>}/>
           <Route path="/admins" element={<AdminDashPage/>}/>
